@@ -1,12 +1,12 @@
 import React from "react";
 import { Box } from "@mui/material";
-import { LeftSideBar } from "./LeftSideBar";
+import { LeftSideBar } from "./SideBar/LeftSideBar";
 
 type Props = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
-export const Frame = ({children}: Props) => {
+export const Frame = ({ children }: Props) => {
   return (
     <Box display="flex">
       <LeftSideBar />
