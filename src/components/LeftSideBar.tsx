@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Drawer, Toolbar, List, Divider } from "@mui/material";
+import { Box, Drawer, Toolbar, List, Divider, Typography } from "@mui/material";
 import { Home, ShowChart, Terminal, Devices } from "@mui/icons-material";
 import { SideBarItem } from "./SideBarItem";
 
@@ -20,7 +20,11 @@ export const LeftSideBar = () => {
         variant="permanent"
         anchor="left"
       >
-        <Toolbar />
+        <Toolbar>
+          <Typography variant="h5" noWrap component="div">
+            Dashboard
+          </Typography>
+        </Toolbar>
         <Divider />
         <List>
           <SideBarItem text="HOME" Icon={Home} />

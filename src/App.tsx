@@ -1,6 +1,8 @@
-import { CssBaseline, Box } from "@mui/material";
+import { CssBaseline, Box, AppBar, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { LeftSideBar } from "./components/LeftSideBar";
+
+const drawerWidth = 300;
 
 export const App = () => {
   return (
@@ -14,7 +16,6 @@ export const App = () => {
             component="main"
             sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
           >
-            hello world
           </Box>
         </Box>
       </Box>
