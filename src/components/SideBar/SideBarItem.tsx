@@ -4,22 +4,27 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Box,
 } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 type Props = {
   text: string;
-  Icon: React.FC;
+  path: string;
+  Icon: React.ReactNode;
 };
 
-export const SideBarItem = ({ text, Icon }: Props) => {
+export const SideBarItem = ({ text, Icon, path }: Props) => {
   return (
-    <ListItem disablePadding>
-      <ListItemButton>
-        <ListItemIcon>
-          <Icon />
-        </ListItemIcon>
-        <ListItemText primary={text} />
-      </ListItemButton>
-    </ListItem>
+    <NavLink to={path} style={{ textDecoration: "none", color: "inherit" }}>
+      <ListItem disablePadding>
+        <ListItemButton>
+          <ListItemIcon>{Icon}</ListItemIcon>
+          <Box sx={{ textDecoration: "none" }}>
+            <ListItemText primary={text} />
+          </Box>
+        </ListItemButton>
+      </ListItem>
+    </NavLink>
   );
 };

@@ -27,10 +27,10 @@ export const LeftSideBar = () => {
         </Toolbar>
         <Divider />
         <List>
-          <SideBarItem text="HOME" Icon={Home} />
-          <SideBarItem text="DEVICES" Icon={Devices} />
-          <SideBarItem text="STATUS" Icon={ShowChart} />
-          <SideBarItem text="PROCESSES" Icon={Terminal} />
+          <SideBarItem text="HOME" Icon={<Home />} path="/home" />
+          <SideBarItem text="DEVICES" Icon={<Devices />} path="/devices" />
+          <SideBarItem text="STATUS" Icon={<ShowChart />} path="/status" />
+          <SideBarItem text="PROCESSES" Icon={<Terminal />} path="/processes" />
         </List>
         <List></List>
       </Drawer>
